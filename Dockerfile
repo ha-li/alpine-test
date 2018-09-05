@@ -3,8 +3,8 @@ RUN apt-get update && \
     apt-get install -y git
 MAINTAINER Ninaj "ninja@ninja.com"
 ENV APPDIR="/app/" \
-    PATH="$PATH:$APPDIR \
-    STATE=Boo
+    PATH="$PATH:$APPDIR" \
+    STATE="Boo"
 COPY ["book.sh", "book2.sh", "tst", "$APPDIR"]
 ADD ["./junk.tar", "/"]
 WORKDIR $APPDIR
